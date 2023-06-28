@@ -20,53 +20,20 @@
       <button>Start</button>
     </div>
   </section>
-
-  <start class="start">
-    <h1>Timed Coding Quiz</h1>
-    <h2>Test your knowledge! Try to answer these coding questions as quick and correct as you can!</h2>
-    <button>Start</button>
-  </start>
-  <!-- going to move to java -->
-  <!-- answer is 2 -->
-  <question-1 class="1">
-    <h1>What does CSS stand for?</h1>
-    <h2>1. Creative Style Sheets</h2>
-    <h2>2. Cascading Style Sheets</h2>
-    <h2>3. Computer Style Sheets</h2>
-    <h2>4. Colorful Style Sheets</h2>
-  </question-1>
-  <!-- answer is 1 -->
-  <question-2 class="2">
-    <h1>Which HTML tag is used to link an external CSS file?</h1>
-    <h2>1. link</h2>
-    <h2>2. style</h2>
-    <h2>3. css</h2>
-    <h2>4. script</h2>
-  </question-2>
-  <!-- answer is 3 -->
-  <question-3 class="3">
-    <h1>Which event is triggered when a user clicks on an HTML element?</h1>
-    <h2>1. onhover</h2>
-    <h2>2. ondrag</h2>
-    <h2>3. onclick</h2>
-    <h2>4. onsubmit</h2>
-  </question-3>
-  <!-- answer is 3 -->
-  <question-4 class="4">
-    <h1>Which JavaScript function is used to change the content of an HTML element?</h1>
-    <h2>1. getElementById()</h2>
-    <h2>2. document.write()</h2>
-    <h2>3. innerHTML()</h2>
-    <h2>4. changeContent()</h2>
-  </question-4>
-  <!-- answer is 4 -->
-  <question-5 class="5">
-    <h1>What is the purpose of the "querySelector" method in JavaScript?</h1>
-    <h2>1. To select an HTML element based on its class name</h2>
-    <h2>2. To select an HTML element based on its ID</h2>
-    <h2>3. To select an HTML element based on its tag name</h2>
-    <h2>4. All of the above</h2>
-  </question-5>
+  <div id="questions" class="hide">
+    <h2 id="question-title">Start</h2>
+    <div id="choices"></div>
+    <div id="end-screen" class="hide">
+      <h2>
+        End of Quiz
+      </h2>
+      <p>Final Score: <span id="score" class="visible"></span></p>
+      <div>
+        <p>Enter your Initials</p>
+        <input id="initials" type="text">
+        <button id="submit">Submit</button>
+      </div>
+    </div>
 <script src="./script.js"></script>
 </body>
 </html>

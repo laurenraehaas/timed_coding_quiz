@@ -24,15 +24,28 @@ section {
     height: 85vh;
     width: 100vw;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#starter-page {
+/*#starter-page {
     background-color: white;
     height: 50vh;
     width: 50vw;
     display: inline-block;
-}
+}*/
 
 .hide {
     display: none;
+}
+
+.visible {
+    background-color: white;
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
