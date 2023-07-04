@@ -29,12 +29,12 @@ section {
     justify-content: center;
 }
 
-/*#starter-page {
+#starter-page {
     background-color: white;
     height: 50vh;
     width: 50vw;
     display: inline-block;
-}*/
+}
 
 .hide {
     display: none;

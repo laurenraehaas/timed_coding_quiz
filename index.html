@@ -17,23 +17,24 @@
     <div id="starter-page" class="start">
       <h1>Timed Coding Quiz</h1>
       <p>Try to answer the following code-related questions within the time limit! Keep in mind that incorrect answers will penalize your score by 5 seconds.</p>
-      <button>Start</button>
+      <button id="start-quiz">Start</button>
     </div>
-  </section>
-  <div id="questions" class="hide">
-    <h2 id="question-title">Start</h2>
-    <div id="choices"></div>
-    <div id="end-screen" class="hide">
-      <h2>
-        End of Quiz
-      </h2>
-      <p>Final Score: <span id="score" class="visible"></span></p>
-      <div>
-        <p>Enter your Initials</p>
-        <input id="initials" type="text">
-        <button id="submit">Submit</button>
+    <div id="questions" class="hide">
+       <h2 id="question-title">Start</h2>
+      <div id="choices" class="choices"></div>
+      <div id="end-screen" class="hide">
+        <h2>
+          End of Quiz
+        </h2>
+        <p>Final Score: <span id="score" class="visible"></span></p>
+        <div>
+          <p>Enter your Initials</p>
+          <input id="initials" type="text">
+          <button id="submit">Submit</button>
+        </div>
       </div>
-    </div>
-<script src="./script.js"></script>
+  </section>
 </body>
+<script src="./js/script.js"></script>
+<script src="./js/questions.js"></script>
 </html>

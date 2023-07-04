@@ -49,4 +49,4 @@ let questions = [
         ],
         answer: "4. All of the above"
     },
-]
+];
