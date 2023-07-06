@@ -7,7 +7,7 @@ let questions = [
             "3. Computer Style Sheets",
             "4. Colorful Style Sheets"
         ],
-        answer: "2. Cascading Style Sheets"
+        answer: 1
     },
     {
         question: "Which HTML tag is used to link an external CSS file?",
@@ -17,7 +17,7 @@ let questions = [
             "3. css",
             "4. script"
         ],
-        answer: "1. link"
+        answer: 0
     },
     {
         question: "Which event is triggered when a user clicks on an HTML element?",
@@ -27,7 +27,7 @@ let questions = [
             "3. onclick",
             "4. onsubmit"
         ],
-        answer: "3. onclick"
+        answer: 2
     },
     {
         question: "Which JavaScript function is used to change the content of an HTML element?",
@@ -37,7 +37,7 @@ let questions = [
             "3. innerHTML()",
             "4. changeContent()"
         ],
-        answer: "3. innerHTML()"
+        answer: 2
     },
     {
         question: "What is the purpose of the 'querySelector' method in JavaScript?",
@@ -47,6 +47,6 @@ let questions = [
             "3. To select an HTML element based on its tag name",
             "4. All of the above"
         ],
-        answer: "4. All of the above"
+        answer: 3
     },
 ];

@@ -48,4 +48,20 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    color: black;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    height: 70%;
+}
+
+.answers {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: whitesmoke;
 }
