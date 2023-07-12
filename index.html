@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timed Coding Quiz</title>
 <link rel="stylesheet" text="text/css" href="./css/reset.css">
 <link rel="stylesheet" text="text/css" href="./css/style.css">
-  <title>Timed Coding Quiz</title>
 </head>
 <body>
   <header>
-    <a href="#">View Highscores</a>
+    <a href="./highscores.html">View Highscores</a>
     <p>Timer: <span id="timer">0</span></p>
   </header>
   <section>
@@ -20,21 +19,20 @@
       <button id="start-quiz">Start</button>
     </div>
     <div id="questions" class="hide">
-       <h2 id="question-title">Start</h2>
+       <h2 id="question-title"></h2>
       <div id="choices" class="choices"></div>
-      <div id="end-screen" class="hide">
-        <h2>
-          End of Quiz
-        </h2>
-        <p>Final Score: <span id="score" class="visible"></span></p>
+    </div>
+    <div id="last-screen" class="hide">
+        <h2>End of Quiz</h2>
+        <p>Final Score: <span id="final-score"></span></p>
         <div>
           <p>Enter your Initials</p>
-          <input id="initials" type="text">
+          <input id="initials" type="text" />
           <button id="submit">Submit</button>
         </div>
       </div>
   </section>
 </body>
-<script src="./js/script.js"></script>
 <script src="./js/questions.js"></script>
+<script src="./js/script.js"></script>
 </html>

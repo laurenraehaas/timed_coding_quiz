@@ -4,9 +4,10 @@ const starterPage = document.getElementById("starter-page")
 const questionsEl = document.getElementById("questions");
 const questionTitle = document.getElementById("question-title");
 const choicesEl = document.getElementById("choices")
-const buttonEl = document.getElementById("submit");
-const endscreenEL = document.getElementById("end-screen")
+const submitEl = document.getElementById("submit");
+const lastScreenEl = document.getElementById("last-screen")
 const scoreEl = document.getElementById("final-score")
+const initialsEl = document.getElementById("initials")
 
 let questionIndex = 0;
 let score = 0;
@@ -15,9 +16,9 @@ let time = 0;
 const endQuiz = () => {
     questionsEl.setAttribute("class", "hide");
     scoreEl.textContent = score;
-    endscreenEL.setAttribute("class", "visible")
+    lastScreenEl.setAttribute("class", "visible")
+    questionIndex = 0
 }
-
 const startTimer = () => {
     time = 1000 * 6
     let countDown = setInterval(() => {
@@ -52,20 +53,21 @@ const startQuestions = () => {
     }
 }
 
-choicesHandler = (event) => {
+const choicesHandler = (event) => {
     let choice = event.target;
-    console.log(choice)
     let choiceData = choice.getAttribute("value");
-    console.log(choiceData)
+    console.log(Number(choiceData))
     let answer = questions[questionIndex].answer
-    if(answer === choiceData) {
+    console.log("ANSWER")
+    console.log(answer)
+    if(answer === Number(choiceData)) {
         console.log(answer + choiceData);
-        score +=10;
+        score += 50;
     } else {
         console.log("wrong");
-        time -=10;
+        time -= 12;
     }
-    if(questionIndex === (questions.length - 1)) {
+    if(questionIndex === questions.length - 1) {
         time = 0
         endQuiz()
     } else {
@@ -102,5 +104,27 @@ const startHandler = () => {
     startQuestions();
 };
 
+const submitHandler = () => {
+    let highScore = localStorage.getItem("High-Score")
+    let parsedScore = JSON.parse(highScore)
+    let initials = initialsEl.value;
+    console.log(initials)
+    if(highScore === null) {
+        highScore = score
+        localStorage.setItem("High-Score", JSON.stringify(highScore))
+        localStorage.setItem("initials", JSON.stringify(initials))
+    }
+
+    if(score > parsedScore) {
+        localStorage.setItem("high-score", JSON.stringify(score))
+        localStorage.setItem("initials", JSON.stringify(initialsEl))
+    }
+
+    score = 0
+    lastScreenEl.setAttribute("class", "hide")
+    starterPage.setAttribute("class", "visible")
+}
+
 startQuiz.addEventListener("click", startHandler);
-choicesEl.addEventListener("click", choicesHandler)
+choicesEl.addEventListener("click", choicesHandler);
+submitEl.addEventListener("click", submitHandler);
